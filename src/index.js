@@ -27,3 +27,7 @@ app.get('/hello', (req, res) => {
 app.listen({ port }, () => {
   console.log(`Example app listening on port ${port}`)
 })
+
+app.get('/users/:id/posts/:postId', (req, res) => {
+  res.send(`UserID: ${req.params.id}, postId: ${req.params.postId}`)
+ })
